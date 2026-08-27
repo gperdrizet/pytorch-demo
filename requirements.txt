@@ -1,0 +1,2 @@
+sympy
+torchvision==0.20.1
