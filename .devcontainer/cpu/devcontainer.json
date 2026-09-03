@@ -52,10 +52,10 @@
 
 	// Use 'onCreateCommand' to run commands once when the container is created
 	// This runs only on initial container creation, not on subsequent starts/attaches
-	"onCreateCommand": "mkdir -p logs && mkdir -p models && mkdir -p data",
+	"onCreateCommand": "",
 
 	// Use 'postCreateCommand' to run commands once after the container is created
-	"postCreateCommand": "mkdir -p logs && mkdir -p models && mkdir -p data",
+	"postCreateCommand": "mkdir -p logs && mkdir -p models && mkdir -p data && pip install -r requirements.txt",
 
 	// Use 'postAttachCommand' to run commands each time a user connects to the container
 	"postAttachCommand": ""

@@ -7,7 +7,7 @@
 	"name": "DeepLearning NVIDIA",
 	"image": "gperdrizet/deeplearning-nvidia",
     "runArgs": [
-		"--gpus", "device=1",         // Use only GPU 0
+		"--gpus", "device=2",         // Use only GPU 0
 		"--pid=host",                 // Use host PIDs, needed for nvidia-smi process list
 		"--ipc=host",                 // Connect to host interprocess namespace
 		"--ulimit", "memlock=-1",     // Turn of memory lock limit
@@ -62,7 +62,7 @@
 	"onCreateCommand": "",
 
 	// Use 'postCreateCommand' to run commands once after the container is created
-	"postCreateCommand": "mkdir -p logs && mkdir -p models && mkdir -p data",
+	"postCreateCommand": "mkdir -p logs && mkdir -p models && mkdir -p data && pip install -r requirements.txt",
 
 	// Use 'postAttachCommand' to run TensorBoard
 	"postAttachCommand": ""
